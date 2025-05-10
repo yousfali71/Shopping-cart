@@ -1,0 +1,59 @@
+.main-likes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;
+  min-height: calc(100vh - 230px);
+  padding: var(--site-padding);
+}
+
+.liked-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.likes-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+@media (max-width: 1175px) {
+  .liked-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 45%));
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .likes-title {
+    font-size: 1.4rem;
+  }
+
+  .main-likes-container {
+    padding: var(--site-padding);
+  }
+}
+
+@media (max-width: 530px) {
+  .main-likes-container {
+    padding: 2rem 1rem;
+  }
+
+  .liked-list {
+    display: grid;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .liked-list p {
+    font-size: 14px;
+  }
+
+  .liked-list button {
+    font-size: 14px;
+    padding: 0.8rem 1rem;
+  }
+}

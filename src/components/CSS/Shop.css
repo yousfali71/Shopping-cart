@@ -1,0 +1,114 @@
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;
+  min-height: calc(100vh - 230px);
+  padding: var(--site-padding);
+}
+
+.shop-categories {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.categories-list {
+  display: flex;
+  text-transform: uppercase;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.category-item {
+  color: var(--accent-dark);
+  padding: 2px 10px;
+  border-radius: 10px;
+  transition: all 200ms;
+}
+
+.category-item.selected {
+  background-color: var(--accent-light);
+}
+
+.category-item:hover {
+  background-color: var(--nav);
+  color: var(--accent-med);
+  cursor: pointer;
+}
+
+.shop-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 30%));
+  justify-content: center;
+  gap: 2vw;
+}
+
+@media (max-width: 1175px) {
+  .shop-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 45%));
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .shop-categories {
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories-list {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow-x: scroll;
+    background-color: var(--nav);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .category-item.selected {
+    color: var(--accent-light);
+    background-color: var(--accent-dark);
+  }
+
+  .shop-container {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .shop-products {
+    display: grid;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .shop-products p {
+    font-size: 14px;
+  }
+
+  .shop-products button {
+    font-size: 18px;
+    padding: 0.8rem 1rem;
+  }
+
+  .categories-list {
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 320px) {
+  .shop-products button {
+    font-size: 14px;
+    padding: 0.8rem 0.5rem;
+  }
+}

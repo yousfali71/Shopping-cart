@@ -1,0 +1,41 @@
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.8rem;
+  padding: var(--site-padding);
+  background-color: var(--nav);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: fit-content;
+}
+
+.footer-h3 {
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1175px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 20px;
+  }
+
+  .footer-h3 {
+    padding: 0;
+  }
+}

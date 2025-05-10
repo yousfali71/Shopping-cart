@@ -1,0 +1,136 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  color: var(--text-dark);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  background-color: var(--nav);
+  padding: var(--site-padding);
+  border-bottom: 3px solid var(--divider);
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-name {
+  color: var(--accent-med);
+  font-size: 1rem;
+  letter-spacing: -1px;
+  font-weight: 900;
+}
+
+.nav-container {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-container a {
+  color: var(--text-dark);
+  transition: all 300ms;
+}
+
+.nav-container a:hover {
+  color: var(--accent-med);
+  background-size: 1px 1em;
+  transform: translate(0px, -3px);
+}
+
+.cart-likes-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-total {
+  color: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-med);
+  width: 10px;
+  height: 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.cart-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.2);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 400ms ease;
+}
+
+.cart-img:hover {
+  cursor: pointer;
+}
+
+.cart-wrapper {
+  position: relative;
+  transition: all 200ms ease;
+}
+
+.cart-wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.heart-container {
+  padding: 0.2rem;
+}
+
+.heart-container img {
+  transform: scale(1.2);
+  transition: all 200ms ease-out;
+}
+
+.heart-container img:hover {
+  transform: scale(1.6);
+  cursor: pointer;
+}
+
+@media (max-width: 1175px) {
+  .header {
+    padding: 20px;
+  }
+
+  .logo-wrapper {
+    transform: scale(0.9);
+    padding-right: 0;
+  }
+
+  .nav-container {
+    font-size: 1.6rem;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 530px) {
+  .header {
+    padding: 20px;
+  }
+
+  .nav-home {
+    display: none;
+  }
+
+  .likes-title {
+    text-align: center;
+  }
+}
